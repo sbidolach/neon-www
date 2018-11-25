@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [ "react-app", "standard", "standard-react"],
+  "plugins": [
+    "mocha",
+    "react"
+  ],
+  "rules": {
+    "mocha/no-exclusive-tests": "error",
+    "standard/no-callback-literal": 0,
+    "react/prop-types": 0,
+    "react/jsx-no-bind": 0
+  },
+  "globals": {
+    "describe": false,
+    "before": false,
+    "beforeEach": false,
+    "it": false,
+    "after": true,
+    "window": true,
+    "location": true,
+    "document": true,
+    "map": true,
+    "navigator": true
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.next
+build
+.env
+npm-debug.log
+yarn-error.log
+.DS_Store
+.idea
+package-lock.json
