@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
-import Notification from '../../components/notification'
-import Auth from '../../helpers/auth'
-import { logEvent } from '../../helpers/analytics'
 import SimpleTable from '../Tables/antTables/tableViews/simpleView'
 import { createColumns } from './config'
 import image1 from '../../image/hack/fund_1.png'
@@ -16,8 +13,6 @@ import image4 from '../../image/hack/fund_4.png'
 import option4 from '../../image/hack/fund_o_4.png'
 import image5 from '../../image/hack/fund_5.png'
 import option5 from '../../image/hack/fund_o_5.png'
-
-const FormItem = Form.Item
 
 const friendsData = [{
   'fund': image1,
@@ -41,10 +36,6 @@ const friendsData = [{
   'surname': 'Doe'
 }]
 
-function hasErrors (fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field])
-}
-
 class AccountForm extends Component {
   constructor (props) {
     super(props)
@@ -58,7 +49,6 @@ class AccountForm extends Component {
   }
 
   render () {
-    const { getFieldDecorator, getFieldsError } = this.props.form
 
     const rowStyle = {
       width: '100%',
@@ -67,25 +57,6 @@ class AccountForm extends Component {
     }
     const colStyle = {
       marginBottom: '16px'
-    }
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        md: { span: 6 },
-        sm: { span: 6 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        md: { span: 18 },
-        sm: { span: 18 }
-      }
-    }
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {span: 24, offset: 0},
-        md: {span: 18, offset: 6},
-        sm: {span: 18, offset: 6}
-      }
     }
     return (
       <Form onSubmit={this.handleSubmit}>

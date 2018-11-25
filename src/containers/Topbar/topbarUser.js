@@ -6,7 +6,6 @@ import IntlMessages from '../../components/utility/intlMessages'
 import defaultUserPic from '../../image/user1.png'
 import authAction from '../../redux/auth/actions'
 import TopbarDropdownWrapper from './topbarDropdown.style'
-import Auth from '../../helpers/auth'
 
 const { logout } = authAction
 
