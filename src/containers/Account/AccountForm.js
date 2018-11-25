@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { Input, Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
 import Button from '../../components/uielements/button'
-import Notification from '../../components/notification'
-import Auth from '../../helpers/auth'
-import { logEvent } from '../../helpers/analytics'
 
 const FormItem = Form.Item
 
@@ -14,37 +11,9 @@ function hasErrors (fieldsError) {
 
 class AccountForm extends Component {
   componentDidMount () {
-    Auth.getUserProfile()
-      .then(user => {
-        const { setFields, validateFields } = this.props.form
-
-        const fullName = user.displayName ? user.displayName.split(' ') : null
-        const firstName = fullName ? fullName[0] : ''
-        const lastName = fullName ? fullName[fullName.length - 1] : ''
-
-        setFields({
-          email: {value: user.email},
-          firstName: {value: firstName},
-          lastName: {value: lastName}
-        })
-
-        validateFields()
-      })
   }
   handleSubmit = e => {
     e.preventDefault()
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        Auth.updateUserProfile(values.firstName, values.lastName)
-          .then(() => {
-            logEvent('account', 'update_profil')
-            Notification(
-              'success',
-              'Your profile has updated'
-            )
-          })
-      }
-    })
   }
 
   render () {
