@@ -13,7 +13,7 @@ function createColumns () {
           <div>
             <span style={{fontSize: '16px'}}><b>{object.name}</b></span>
             <br/><br/>
-            <img src={object.image} style={{height: '90px'}}/>
+            <img src={object.image} style={{height: '90px'}} alt=""/>
           </div>
         )
       }
@@ -37,7 +37,7 @@ function createColumns () {
       render: object => {
         return (
           <div>
-            <img src={object.performance} style={{height: '70px'}}/>
+            <img src={object.performance} style={{height: '70px'}} alt=""/>
           </div>
         )
       }

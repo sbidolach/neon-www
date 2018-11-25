@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
 import Button from '../../components/uielements/button'
-import { Link } from 'react-router-dom'
 import { createColumns } from './config'
 import stats1 from '../../image/hack/stats1.png'
 
@@ -47,9 +46,7 @@ class AccountForm extends Component {
         sm: { span: 18 }
       }
     }
-
-    //const url = 'http://localhost:8080/dashboard'
-
+    
     return (
       <div>
         <Row style={rowStyle} gutter={16} justify="start">
@@ -63,7 +60,7 @@ class AccountForm extends Component {
           </Col>
         </Row>
         <Row>
-          <img src={stats1} style={{width: '100%'}} />
+          <img src={stats1} style={{width: '100%'}} alt="" />
         </Row>
       </div>
     )

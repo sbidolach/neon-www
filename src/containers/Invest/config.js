@@ -10,7 +10,7 @@ function createColumns () {
       render: object => {
         return (
           <div>
-            <img src={object.fund} style={{height: '70px'}}/>
+            <img src={object.fund} style={{height: '70px'}} alt=""/>
           </div>
         )
       }
@@ -21,7 +21,7 @@ function createColumns () {
       render: object => {
         return (
           <div>
-            <img src={object.option} style={{height: '70px'}}/>
+            <img src={object.option} style={{height: '70px'}} alt=""/>
           </div>
         )
       }

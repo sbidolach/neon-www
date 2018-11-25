@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Popconfirm from '../feedback/popconfirm'
-import Button from '../uielements/button'
-
 
 export default class extends Component {
   render () {

@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { Input, Col, Row } from 'antd'
+import { Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
-import Notification from '../../components/notification'
-import Auth from '../../helpers/auth'
-import { logEvent } from '../../helpers/analytics'
 import SimpleTable from '../Tables/antTables/tableViews/simpleView'
 import { createColumns } from './config'
 

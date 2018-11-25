@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
-import Notification from '../../components/notification'
-import Auth from '../../helpers/auth'
-import { logEvent } from '../../helpers/analytics'
 import stats2 from '../../image/hack/stats2.png'
 
 class AccountForm extends Component {

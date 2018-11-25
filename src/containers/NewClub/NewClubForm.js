@@ -1,16 +1,8 @@
 import React, { Component } from 'react'
 import { Input, Col, Row } from 'antd'
 import Form from '../../components/uielements/form'
-import Button from '../../components/uielements/button'
-import Notification from '../../components/notification'
-import Auth from '../../helpers/auth'
-import { logEvent } from '../../helpers/analytics'
 
 const FormItem = Form.Item
-
-function hasErrors (fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field])
-}
 
 class AccountForm extends Component {
   componentDidMount () {
@@ -20,7 +12,7 @@ class AccountForm extends Component {
   }
 
   render () {
-    const { getFieldDecorator, getFieldsError } = this.props.form
+    const { getFieldDecorator } = this.props.form
 
     const rowStyle = {
       width: '100%',
